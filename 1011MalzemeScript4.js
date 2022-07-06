@@ -7,13 +7,13 @@ select.addEventListener('change', () =>
 
 
 
-$(function(){
-    $(".form-control[data-group-id='12']").trigger('change'); 
-    $(".form-control[data-group-id='12']").change(function(){
-        location.reload(),
-        console.log('refreshed')          
-    });
-});
+// $(function(){
+//     $(".form-control[data-group-id='12']").trigger('change'); 
+//     $(".form-control[data-group-id='12']").change(function(){
+//         location.reload(),
+//         console.log('refreshed')          
+//     });
+// });
 
 
 
