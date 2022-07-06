@@ -1,1 +1,1 @@
-alert('selam')
+console.log('selam')
