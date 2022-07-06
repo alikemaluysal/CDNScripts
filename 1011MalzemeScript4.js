@@ -5,7 +5,7 @@ select.addEventListener('change', () =>
     setTimeout(function(){
         location.reload(),
         console.log('refreshed')
-    }, 2000)
+    }, 1000)
 
 );
 
