@@ -7,7 +7,7 @@
 
     Cargo = {
 
-        configFile: 'https://www.alikemaluysal.com/1011malzeme/config.json',
+        configFile: config,
         note: '',
         length: '',
         cargo: localStorage.getItem('cargo') == null ? 0 : localStorage.getItem('cargo'),
