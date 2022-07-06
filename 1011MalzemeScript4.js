@@ -1,12 +1,12 @@
 var select = document.querySelector(".form-control[data-group-id='12']");
 
 select.addEventListener('change', () => 
-    location.reload(),
+
     setTimeout(function(){
+        location.reload(),
+        console.log('refreshed')
+    }, 2000)
 
-
-    }, 2000),
-    console.log('refreshed')
 );
 
 
