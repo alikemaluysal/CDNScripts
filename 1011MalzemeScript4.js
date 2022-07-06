@@ -1,4 +1,4 @@
-let select = document.getElementsByName('variant-0');
+var select = document.querySelector('variant-0');
 
 select.addEventListener('change', () => 
     location.reload(),
