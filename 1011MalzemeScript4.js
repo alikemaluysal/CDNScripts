@@ -2,12 +2,40 @@ var select = document.querySelector(".form-control[data-group-id='12']");
 
 select.addEventListener('change', () => 
 
-    setTimeout(function(){
-        location.reload(),
-        console.log('refreshed')
-    }, 1000)
-
+function forceReloadJS(srcUrlContains) {
+    $.each($('script:empty[src*="' + srcUrlContains + '"]'), function(index, el) {
+      var oldSrc = $(el).attr('src');
+      var t = +new Date();
+      var newSrc = oldSrc + '?' + t;
+  
+      console.log(oldSrc, ' to ', newSrc);
+  
+      $(el).remove();
+      $('<script/>').attr('src', newSrc).appendTo('head');
+    });
+  },
+  forceReloadJS('/libs/')
 );
+
+
+
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------
+
+
+// var select = document.querySelector(".form-control[data-group-id='12']");
+
+// select.addEventListener('change', () => 
+
+//     setTimeout(function(){
+//         location.reload(),
+//         console.log('refreshed')
+//     }, 1000)
+
+// );
+
 
 
 
