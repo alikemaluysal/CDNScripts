@@ -1,22 +1,62 @@
-    let src1 = 'https://cdn.jsdelivr.net/gh/alikemaluysal/CDNScripts@latest/1011MalzemeScript1.js';
-    
-    let src2 = 'https://cdn.jsdelivr.net/gh/alikemaluysal/CDNScripts@latest/1011MalzemeScript2.js';
-    
-    function reload_js(src) {
-        $('script[src="' + src + '"]').remove();
-        $('<script>').attr('src', src).appendTo('head');
-    }
 
 var select = document.querySelector(".form-control[data-group-id='12']");
 
 select.addEventListener('change', () => 
 
-reload_js(src1),
-console.log('script 1 reloaded'),
-reload_js(src2),
-console.log('script 2 reloaded')
+    setTimeout(function(){
+        location.reload(),
+        console.log('refreshed')
+    }, 1000)
 
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     let src1 = 'https://cdn.jsdelivr.net/gh/alikemaluysal/CDNScripts@latest/1011MalzemeScript1.js';
+    
+//     let src2 = 'https://cdn.jsdelivr.net/gh/alikemaluysal/CDNScripts@latest/1011MalzemeScript2.js';
+    
+//     function reload_js(src) {
+//         $('script[src="' + src + '"]').remove();
+//         $('<script>').attr('src', src).appendTo('head');
+//     }
+
+// var select = document.querySelector(".form-control[data-group-id='12']");
+
+// select.addEventListener('change', () => 
+
+// reload_js(src1),
+// console.log('script 1 reloaded'),
+// reload_js(src2),
+// console.log('script 2 reloaded')
+
+// );
 
 
 
