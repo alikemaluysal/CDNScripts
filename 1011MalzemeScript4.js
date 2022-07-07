@@ -1,21 +1,56 @@
+    let src1 = 'https://cdn.jsdelivr.net/gh/alikemaluysal/CDNScripts@latest/1011MalzemeScript1.js';
+    
+    let src2 = 'https://cdn.jsdelivr.net/gh/alikemaluysal/CDNScripts@latest/1011MalzemeScript2.js';
+    
+
+
 var select = document.querySelector(".form-control[data-group-id='12']");
 
 select.addEventListener('change', () => 
 
-function forceReloadJS(srcUrlContains) {
-    $.each($('script:empty[src*="' + srcUrlContains + '"]'), function(index, el) {
-      var oldSrc = $(el).attr('src');
-      var t = +new Date();
-      var newSrc = oldSrc + '?' + t;
-  
-      console.log(oldSrc, ' to ', newSrc);
-  
-      $(el).remove();
-      $('<script/>').attr('src', newSrc).appendTo('head');
-    });
-  },
-  forceReloadJS('/libs/')
+
+function reload_js(src1) {
+    $('script[src="' + src1 + '"]').remove();
+    $('<script>').attr('src', src1).appendTo('head');
+},
+reload_js('source_file.js'),
+console.log('script 1 reloaded'),
+
+
+function reload_js(src2) {
+    $('script[src="' + src2 + '"]').remove();
+    $('<script>').attr('src', src2).appendTo('head');
+},
+reload_js('source_file.js'),
+console.log('script 2 reloaded')
+
 );
+
+
+
+
+
+
+
+
+// var select = document.querySelector(".form-control[data-group-id='12']");
+
+// select.addEventListener('change', () => 
+
+// function forceReloadJS(srcUrlContains) {
+//     $.each($('script:empty[src*="' + srcUrlContains + '"]'), function(index, el) {
+//       var oldSrc = $(el).attr('src');
+//       var t = +new Date();
+//       var newSrc = oldSrc + '?' + t;
+  
+//       console.log(oldSrc, ' to ', newSrc);
+  
+//       $(el).remove();
+//       $('<script/>').attr('src', newSrc).appendTo('head');
+//     });
+//   },
+//   forceReloadJS('/libs/')
+// );
 
 
 
