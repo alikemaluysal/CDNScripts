@@ -1,13 +1,11 @@
+var priceTag = document.getElementsByClassName("product-price-old")
 
-var select = document.querySelector(".form-control[data-group-id='12']");
-
-select.addEventListener('change', () => 
+priceTag.addEventListener('change', () => 
 
     setTimeout(function(){
         location.reload(),
         console.log('refreshed')
-    }, 1000)
-
+    }, 1000)    
 );
 
 
@@ -15,6 +13,25 @@ select.addEventListener('change', () =>
 
 
 
+// var select = document.querySelector(".form-control[data-group-id='12']");
+
+// select.addEventListener('change', () => 
+
+//     setTimeout(function(){
+//         location.reload(),
+//         console.log('refreshed')
+//     }, 1000)
+
+    
+// );
+
+
+// var form = document.querySelector()
+
+// document.getElementById('form1').addEventListener('submit', function(){
+//     document.getElementById('donate').style.display = 'none';
+//     document.getElementById('topMessage').style.display = 'none';
+// });
 
 
 
